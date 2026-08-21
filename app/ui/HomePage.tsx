@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { devices, research } from "./content";
-import { Circuit, Footer, Header, Probability } from "./Shared";
+import { Footer, Header } from "./Shared";
 
 function SectionHead({ no, eyebrow, title, sub }: { no: string; eyebrow: string; title: string; sub?: string }) {
   return <div className="section-head"><span className="section-no">{no}</span><div><p className="eyebrow">{eyebrow}</p><h2>{title}</h2>{sub && <p className="section-sub">{sub}</p>}</div></div>;
@@ -18,8 +18,8 @@ export function HomePage() {
     <main>
       <section className="hero" id="top">
         <div className="grid-lines" aria-hidden="true" />
-        <div className="hero-copy"><p className="eyebrow"><span className="live-dot" /> OPEN QUANTUM CLOUD · BEIJING</p><div className="zh-copy"><h1>你的第一条<br />量子线路，<br /><em>已经写好了。</em></h1><p className="lead">打开编程页就能运行——在模拟器上，不必安装，也不必注册。注册之后，同一段代码可以运行在真实的量子处理器上，这不收费。</p><div className="hero-actions"><Link className="button primary beacon" href="/lab">运行它 <span>→</span></Link><a className="button secondary" href="#devices">先看看设备</a></div></div><div className="en-copy"><h1>Your first<br />quantum circuit<br /><em>is ready.</em></h1><p className="lead">Run it in your browser on a simulator—no installation or sign-up. Create a free account when you are ready to send the same code to a real quantum processor.</p><div className="hero-actions"><Link className="button primary beacon" href="/lab">Run it <span>→</span></Link><a className="button secondary" href="#devices">View devices</a></div></div></div>
-        <div className="hero-instrument"><Circuit /><div className="instrument-result"><div><span>MEASUREMENT</span><b>1,024 shots</b></div><Probability animate /></div></div>
+        <div className="hero-atmosphere" aria-hidden="true"><i /><i /><i /><span /></div>
+        <div className="hero-copy"><p className="eyebrow"><span className="live-dot" /> OPEN QUANTUM CLOUD · BEIJING</p><div className="zh-copy"><h1>你的第一条量子线路，<br /><em>已经写好了。</em></h1><p className="lead">打开编程页就能运行——在模拟器上，不必安装，也不必注册。注册之后，同一段代码可以运行在真实的量子处理器上，这不收费。</p><div className="hero-actions"><Link className="button primary beacon" href="/lab">运行它 <span>→</span></Link><a className="button secondary" href="#devices">先看看设备</a></div></div><div className="en-copy"><h1>Your first quantum circuit<br /><em>is ready.</em></h1><p className="lead">Run it in your browser on a simulator—no installation or sign-up. Create a free account when you are ready to send the same code to a real quantum processor.</p><div className="hero-actions"><Link className="button primary beacon" href="/lab">Run it <span>→</span></Link><a className="button secondary" href="#devices">View devices</a></div></div></div>
         <nav className="pathways" aria-label="探索捷径"><a href="#play"><span>01</span>零基础？玩个量子小实验</a><a href="#learn"><span>02</span>想系统学？进量子小课堂</a><a href="#dev"><span>03</span>会写代码？从这里接上</a><a href="#research"><span>04</span>做研究？量子计算能帮你做什么</a></nav>
       </section>
 

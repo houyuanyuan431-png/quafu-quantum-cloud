@@ -16,6 +16,8 @@ test("renders the seven-screen Quafu homepage", async () => {
   const html = await response.text();
   for (const text of ["你的第一条", "设备实况", "零基础？", "想系统学？", "会写代码？", "做研究？", "做出来的东西"]) assert.match(html, new RegExp(text));
   assert.match(html, /href="\/lab"/);
+  assert.match(html, /你的第一条量子线路，<br\/>/);
+  assert.doesNotMatch(html, /LIVE CIRCUIT|MEASUREMENT|hero-instrument/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Lorem ipsum/i);
 });
 
